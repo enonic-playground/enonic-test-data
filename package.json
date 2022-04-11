@@ -1,0 +1,32 @@
+{
+  "author": "Christian Westgaard <cwe@enonic.com>",
+  "contributors": [],
+  "dependencies": {},
+  "devDependencies": {
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.3"
+  },
+  "description": "Test data",
+  "files": [
+    "/dist",
+    "/src"
+  ],
+  "keywords": [
+    "test data",
+    "test",
+    "enonic",
+    "typescript",
+    "ecmascript",
+    "javascript",
+    "commonjs"
+  ],
+  "license": "GPL-3.0",
+  "name": "@enonic/test-data",
+  "scripts": {
+    "clean": "rm -r dist 2>/dev/null;true",
+    "build": "npx tsc",
+    "prebuild": "yarn clean",
+    "prepack": "yarn build"
+  },
+  "version": "0.1.0"
+}

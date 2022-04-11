@@ -9,7 +9,9 @@
   "description": "Test data",
   "files": [
     "/dist",
-    "/src"
+    "/media",
+    "/src",
+    "README.md"
   ],
   "keywords": [
     "test data",
@@ -29,5 +31,5 @@
     "prebuild": "yarn clean",
     "prepack": "yarn build"
   },
-  "version": "0.1.1"
+  "version": "0.1.2"
 }

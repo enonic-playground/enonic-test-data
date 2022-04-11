@@ -109,7 +109,7 @@ export const BOOLEANS = [
 export const STRINGS_BOOLEAN = BOOLEANS.map(i => ''+i);
 //console.debug('STRINGS_BOOLEAN', STRINGS_BOOLEAN);
 
-export const EMPTY_ARRAY = [];
+export const EMPTY_ARRAY :Array<never> = [];
 export const STRING_EMPTY_ARRAY = '[]';
 //console.debug('STRING_EMPTY_ARRAY', STRING_EMPTY_ARRAY);
 
@@ -344,7 +344,7 @@ export const NOT_STRINGS = ([] as Array<unknown>).concat(
 	//UNDEFINED // Enonic XP doesn't index undefined
 );
 
-export const NOT_UUID_V4 = [
+export const NOT_UUID_V4 :Array<unknown> = [
 	...UUID_V4_INVALID,
 	EMPTY_STRING,
 	'a',

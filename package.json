@@ -21,6 +21,7 @@
     "commonjs"
   ],
   "license": "GPL-3.0",
+  "main": "dist/index.js",
   "name": "@enonic/test-data",
   "scripts": {
     "clean": "rm -r dist 2>/dev/null;true",
@@ -28,5 +29,5 @@
     "prebuild": "yarn clean",
     "prepack": "yarn build"
   },
-  "version": "0.1.0"
+  "version": "0.1.1"
 }

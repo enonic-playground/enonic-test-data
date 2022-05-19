@@ -99,7 +99,7 @@ export const TILDE = '~'; // 126
 
 
 export const ASCII_PUNCTUATION = [
-	SPACE, // 32
+	//SPACE, // 32 // Not really punctuation
 	EXCLAMATION_MARK, // 33
 	QUOTATION_MARK, // 34
 	NUMBER_SIGN, // 35
@@ -209,7 +209,9 @@ export const ASCII_PRINTABLE_LETTERS_LOWERCASE = [
 ];
 
 
-export const ASCII_PRINTABLE = ([] as Array<string>).concat(
+export const ASCII_PRINTABLE = [
+	SPACE
+].concat(
 	ASCII_PUNCTUATION,
 	ASCII_DIGITS,
 	ASCII_PRINTABLE_LETTERS_CAPITAL,

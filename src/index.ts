@@ -95,6 +95,10 @@ export {
 } from './Number';
 
 export {
+	ASCII_PUNCTUATION
+} from './String';
+
+export {
 	UUID_NIL,
 	UUID_V4,
 	UUID_V4_INVALID

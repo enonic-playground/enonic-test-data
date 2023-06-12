@@ -25,6 +25,9 @@
   "license": "GPL-3.0",
   "main": "dist/index.js",
   "name": "@enonic/test-data",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "clean": "rm -r dist 2>/dev/null;true",
     "build": "npx tsc",

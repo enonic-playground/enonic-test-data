@@ -228,11 +228,12 @@ export const TRUTHY = ([] as Array<unknown>).concat([
 ]);
 
 //──────────────────────────────────────────────────────────────────────────────
-// NOT
+// EVERYTHING
 //──────────────────────────────────────────────────────────────────────────────
-export const NOT_BIG_INTS = ([] as Array<unknown>).concat(
+const EVERYTHING = ([] as Array<unknown>).concat(
 	ASCII_PUNCTUATION,
 	BOOLEANS,
+	BIG_INTS,
 	DATE_OBJECT,
 	DATE_OBJECT_STRINGS,
 	// DATE_OBJECTS, // in INSTANTS and LOCAL_DATES and LOCAL_DATE_TIMES and LOCAL_TIMES
@@ -283,10 +284,16 @@ export const NOT_BIG_INTS = ([] as Array<unknown>).concat(
 	// STRINGS_INTEGER_NON_NEGATIVE, // in STRINGS
 	STRINGS_INTEGER_POSITIVE,
 	// STRINGS_NUMBER_INFINITE, // in STRINGS
+	UNDEFINED,
 	UUID_NIL,
 	UUID_V4,
 	// UUID_V4_INVALID
 );
+
+//──────────────────────────────────────────────────────────────────────────────
+// NOT
+//──────────────────────────────────────────────────────────────────────────────
+export const NOT_BIG_INTS = EVERYTHING.filter((value) => !BIG_INTS.includes(value as bigint));
 
 export const NOT_BOOLEANS = ([] as Array<unknown>).concat(
 	//BOOLEANS,
@@ -418,6 +425,8 @@ export const NOT_LOCAL_DATE_TIME_STRINGS = ([] as Array<unknown>).concat(
 	STRINGS,
 	[UNDEFINED]
 );
+
+export const NOT_NULL = EVERYTHING.filter((value) => value !== null);
 
 export const NOT_NUMBERS = ([] as Array<unknown>).concat(
 	BOOLEANS,

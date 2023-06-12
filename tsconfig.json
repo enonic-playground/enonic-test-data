@@ -6,7 +6,6 @@
 		"declarationMap": false,
 		"downlevelIteration": true,
 		"importHelpers": true,
-		"importsNotUsedAsValues": "error",
 		"inlineSourceMap": false,
 		"inlineSources": false,
 		"listEmittedFiles": false,
@@ -20,32 +19,34 @@
 		"noUncheckedIndexedAccess": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"outDir": "dist/",
-		"paths": {
-			"@enonic/js-utils/dist/cjs": ["node_modules/@enonic/js-utils/src"]
-		},
+		"outDir": "./dist/",
+		// "paths": {
+		// 	"@enonic/js-utils/dist/cjs": ["node_modules/@enonic/js-utils/src"]
+		// },
 		"removeComments": true,
 		"resolveJsonModule": true,
-		"rootDir": "src",
-		"rootDirs": [
-			"src",
-			"node_modules",
-			"test"
-		],
+		"rootDir": "./src",
+		// "rootDirs": [
+		// 	"src",
+		// 	"node_modules",
+		// 	// "test"
+		// ],
+		"skipLibCheck": true,
 		"sourceMap": false,
 		"strict": true,
 		"strictFunctionTypes": true,
 		"strictNullChecks": true,
-		"target": "ES3",
-		"types": [
-		]
+		"target": "ES5",
+		// "types": [],
+		"verbatimModuleSyntax": false,
 	},
 	"exclude": [
-		"node_modules"
+		"node_modules",
+		"test",
 	],
-	"files": [
-		"src/index.ts"
-	],
+	// "files": [
+	// 	"src/index.ts"
+	// ],
 	"include": [
 		"src/**/*.ts"
 	]

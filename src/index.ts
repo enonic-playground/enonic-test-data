@@ -27,13 +27,17 @@ import {
 } from './GeoPoint';
 
 import {
+	BIG_INT_ZERO,
+	BIG_INTS_NEGATIVE,
+	BIG_INTS_POSITIVE,
 	FLOATS,
 	NUMBERS_INFINITE,
-	// INTEGERS_NEGATIVE,
+	INTEGERS_NEGATIVE,
 	// INTEGERS_NON_NEGATIVE,
-	// INTEGERS_POSITIVE,
+	INTEGERS_POSITIVE,
 	NAN,
 	// INTEGERS,
+	NUMBER_ZERO,
 	// NUMBERS_FINITE,
 	NUMBERS,
 	STRINGS_FLOAT,
@@ -48,7 +52,7 @@ import {
 } from './Number';
 
 import {
-	ASCII_PUNCTUATION
+	ASCII_PUNCTUATION, STRING_NUMBER_ZERO,
 } from './String';
 
 import {
@@ -93,6 +97,7 @@ export {
 	INTEGERS_POSITIVE,
 	NAN,
 	INTEGERS,
+	NUMBER_ZERO,
 	NUMBERS_FINITE,
 	NUMBERS,
 	STRINGS_FLOAT,
@@ -114,10 +119,15 @@ export {
 
 //──────────────────────────────────────────────────────────────────────────────
 
+export const BOOLEAN_FALSE = false;
+export const BOOLEAN_TRUE = true;
+
 export const BOOLEANS = [
-	false,
-	true
+	BOOLEAN_FALSE,
+	BOOLEAN_TRUE
 ];
+export const STRING_BOOLEAN_FALSE = ''+BOOLEAN_FALSE;
+export const STRING_BOOLEAN_TRUE = ''+BOOLEAN_TRUE;
 export const STRINGS_BOOLEAN = BOOLEANS.map(i => ''+i);
 //console.debug('STRINGS_BOOLEAN', STRINGS_BOOLEAN);
 
@@ -129,7 +139,12 @@ export const EMPTY_OBJECT = {};
 export const STRING_EMPTY_OBJECT = '{}';
 //console.debug('STRING_EMPTY_OBJECT', STRING_EMPTY_OBJECT);
 
-export const EMPTY_STRING = '';
+// TS2584: Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
+// export const DOCUMENT_ALL_OBJECT = document.all;
+
+export const EMPTY_STRING = "";
+// export const EMPTY_STRING = ''; // Same as previous line
+// export const EMPTY_TEMPLATE_LITERAL = ``; // Nope just becomes an empty string
 
 export const FUNCTION = () => {};
 
@@ -145,6 +160,20 @@ export const UNDEFINED = undefined;
 //──────────────────────────────────────────────────────────────────────────────
 // Derived
 //──────────────────────────────────────────────────────────────────────────────
+
+// https://developer.mozilla.org/en-US/docs/Glossary/Falsy
+export const FALSY = ([] as Array<unknown>).concat([
+	BIG_INT_ZERO,
+	BOOLEAN_FALSE,
+	// DOCUMENT_ALL_OBJECT,
+	EMPTY_STRING,
+	NAN,
+	NULL,
+	NUMBER_ZERO,
+	//NUMBER_ZERO_NEGATIVE, // Becomes 0 which is a positive integer
+	UNDEFINED
+]);
+
 
 export const STRINGS = ([] as Array<string>).concat([
 	EMPTY_STRING,
@@ -171,6 +200,22 @@ export const STRINGS = ([] as Array<string>).concat([
 	LOCAL_DATE_TIME_STRINGS_INVALID,
 	UUID_NIL*/
 );
+
+// https://developer.mozilla.org/en-US/docs/Glossary/Truthy
+export const TRUTHY = ([] as Array<unknown>).concat([
+	BIG_INTS_NEGATIVE,
+	BIG_INTS_POSITIVE,
+	BOOLEAN_TRUE,
+	EMPTY_ARRAY,
+	EMPTY_OBJECT,
+	DATE_OBJECT,
+	FLOATS,
+	INTEGERS_NEGATIVE,
+	INTEGERS_POSITIVE,
+	NUMBERS_INFINITE,
+	STRING_BOOLEAN_FALSE,
+	STRING_NUMBER_ZERO,
+]);
 
 //──────────────────────────────────────────────────────────────────────────────
 // NOT

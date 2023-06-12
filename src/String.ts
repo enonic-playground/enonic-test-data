@@ -17,16 +17,16 @@ export const COMMA = ','; // 44
 export const HYPHEN = '-'; // 45
 export const DOT = '.'; // 46
 export const SLASH = '/'; // 47
-export const NUMBER_ZERO = '0'; // 48
-export const NUMBER_ONE = '1'; // 49
-export const NUMBER_TWO = '2'; // 50
-export const NUMBER_THREE = '3'; // 51
-export const NUMBER_FOUR = '4'; // 52
-export const NUMBER_FIVE = '5'; // 53
-export const NUMBER_SIX = '6'; // 54
-export const NUMBER_SEVEN = '7'; // 55
-export const NUMBER_EIGHT = '8'; // 56
-export const NUMBER_NINE = '9'; // 57
+export const STRING_NUMBER_ZERO = '0'; // 48
+export const STRING_NUMBER_ONE = '1'; // 49
+export const STRING_NUMBER_TWO = '2'; // 50
+export const STRING_NUMBER_THREE = '3'; // 51
+export const STRING_NUMBER_FOUR = '4'; // 52
+export const STRING_NUMBER_FIVE = '5'; // 53
+export const STRING_NUMBER_SIX = '6'; // 54
+export const STRING_NUMBER_SEVEN = '7'; // 55
+export const STRING_NUMBER_EIGHT = '8'; // 56
+export const STRING_NUMBER_NINE = '9'; // 57
 export const COLON = ':'; // 58
 export const SEMICOLON = ';'; // 59
 export const LESS_THAN_SIGN = '<'; // 60
@@ -136,16 +136,16 @@ export const ASCII_PUNCTUATION = [
 
 
 export const ASCII_DIGITS = [
-	NUMBER_ZERO,
-	NUMBER_ONE,
-	NUMBER_TWO,
-	NUMBER_THREE,
-	NUMBER_FOUR,
-	NUMBER_FIVE,
-	NUMBER_SIX,
-	NUMBER_SEVEN,
-	NUMBER_EIGHT,
-	NUMBER_NINE
+	STRING_NUMBER_ZERO,
+	STRING_NUMBER_ONE,
+	STRING_NUMBER_TWO,
+	STRING_NUMBER_THREE,
+	STRING_NUMBER_FOUR,
+	STRING_NUMBER_FIVE,
+	STRING_NUMBER_SIX,
+	STRING_NUMBER_SEVEN,
+	STRING_NUMBER_EIGHT,
+	STRING_NUMBER_NINE
 ];
 
 

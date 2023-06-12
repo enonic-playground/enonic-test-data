@@ -1,0 +1,20 @@
+{
+	"compilerOptions": {
+		"allowJs": false,
+		"esModuleInterop": true,
+		"baseUrl": ".",
+		"declaration": false,
+		"moduleResolution": "node",
+		"lib": [
+			"ESNext"
+		],
+		"outDir": "./build",
+		"skipLibCheck": true,
+		"strictNullChecks": false,
+		"target": "ESNext",
+	},
+	"exclude": [],
+	"include": [
+		"./**/*.ts"
+	]
+}

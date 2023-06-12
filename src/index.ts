@@ -356,7 +356,7 @@ export const NOT_STRINGS = ([] as Array<unknown>).concat(
 	//UNDEFINED // Enonic XP doesn't index undefined
 );
 
-export const NOT_UNDEFINED: Array<unknown> = [
+export const NOT_UNDEFINED = ([] as Array<unknown>).concat(
 	ASCII_PUNCTUATION,
 	BOOLEANS,
 	DATE_OBJECT,
@@ -412,7 +412,7 @@ export const NOT_UNDEFINED: Array<unknown> = [
 	UUID_NIL,
 	UUID_V4,
 	// UUID_V4_INVALID
-];
+);
 
 export const NOT_UUID_V4 :Array<unknown> = [
 	...UUID_V4_INVALID,
